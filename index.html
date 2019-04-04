@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = prompt("Nhập 1 từ:");
+    if(isPalindrome(input))
+        alert(""+input+" là 1 từ đối xứng!");
+    else
+        alert(""+input+" không phải là 1 từ đối xứng!");
+
+
+    function isPalindrome(word) {
+        let a = 0, b = word.length-1;
+        let count = 0;
+        while (a!=b && a!=b+1){
+            if(word[a]!=word[b])
+                break;
+            else {
+                count++;
+                a = a + 1;
+                b = b - 1;
+            }
+        }
+
+        if(count==word.length/2 || count==word.length-1/2)
+            return true;
+        else
+            return false;
+    }
+
+</script>
+</body>
+</html>
